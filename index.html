@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КЛАУД | ИИ-помощник для учебных проектов</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <!-- Настройки темы -->
+    <div class="theme-switcher">
+        <button id="themeToggle" class="theme-btn">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+        </button>
+    </div>
+
+    <!-- Шапка с анимацией -->
+    <header class="animate__animated animate__fadeInDown">
+        <div class="container">
+            <div class="header-main">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>КЛАУД</h1>
+                        <p class="logo-subtitle">ИИ-помощник для учебных проектов</p>
+                    </div>
+                </div>
+                <div class="user-info">
+                    <div class="student-card">
+                        <i class="fas fa-user"></i>
+                        <div>
+                            <strong>Гость</strong>
+                            <span>9А класс</span>
+                        </div>
+                    </div>
+                    <div class="ai-status">
+                        <div class="status-dot online"></div>
+                        <span>ИИ онлайн</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Навигация -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#dashboard" class="nav-link active"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="#uipd" class="nav-link"><i class="fas fa-book"></i> Что такое УИПД</a></li>
+                    <li><a href="#visualizer" class="nav-link"><i class="fas fa-eye"></i> Визуализатор</a></li>
+                    <li><a href="#structure" class="nav-link"><i class="fas fa-sitemap"></i> Структура</a></li>
+                    <li><a href="#projects" class="nav-link"><i class="fas fa-star"></i> Примеры</a></li>
+                    <li><a href="#progress" class="nav-link"><i class="fas fa-chart-line"></i> Прогресс</a></li>
+                    <li><a href="#ai-help" class="nav-link"><i class="fas fa-robot"></i> Помощь ИИ</a></li>
+                </ul>
+                <div class="nav-indicator"></div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Баннер -->
+    <section class="hero animate__animated animate__fadeInUp">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">Привет! Я <span class="highlight">КЛАУД</span> - твой ИИ-помощник</h2>
+                <p class="hero-text">Помогаю готовить и защищать учебные проекты. Создан Амаряном Суреном (9А) и командой!</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">20</span>
+                        <span class="stat-label">страниц примера</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">7</span>
+                        <span class="stat-label">этапов</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">15с</span>
+                        <span class="stat-label">на слайд</span>
+                    </div>
+                </div>
+                <button class="btn-primary" id="startProjectBtn">
+                    <i class="fas fa-play-circle"></i> Начать с ИИ-помощником
+                </button>
+            </div>
+            <div class="hero-image">
+                <div class="floating-element">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="floating-element delay-1">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="floating-element delay-2">
+                    <i class="fas fa-trophy"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- Что такое УИПД -->
+        <section id="uipd" class="card">
+            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Что такое УИПД?</h2>
+            <p class="section-subtitle">Учебно-исследовательская проектная деятельность - твой путь к отличной оценке!</p>
+            
+            <div class="uipd-info">
+                <div class="uipd-card">
+                    <div class="uipd-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Что это такое?</h3>
+                    <p><strong>УИПД</strong> - это специальная учебная деятельность, где ты самостоятельно проводишь исследование или создаешь проект по выбранной теме. Это не просто реферат, а настоящая научная или творческая работа!</p>
+                </div>
+                
+                <div class="uipd-card">
+                    <div class="uipd-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Цели УИПД</h3>
+                    <ul>
+                        <li>Развитие исследовательских навыков</li>
+                        <li>Умение работать с информацией</li>
+                        <li>Развитие критического мышления</li>
+                        <li>Подготовка к будущим проектам</li>
+                        <li>Развитие навыков презентации</li>
+                    </ul>
+                </div>
+                
+                <div class="uipd-card">
+                    <div class="uipd-icon">
+                        <i class="fas fa-list-check"></i>
+                    </div>
+                    <h3>Требования 9 класса</h3>
+                    <div class="requirements">
+                        <div class="requirement">
+                            <i class="fas fa-file-alt"></i>
+                            <div>
+                                <h4>Объем работы</h4>
+                                <p>15-20 страниц (без приложений)</p>
+                            </div>
+                        </div>
+                        <div class="requirement">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Сроки</h4>
+                                <p>2-3 месяца на весь проект</p>
+                            </div>
+                        </div>
+                        <div class="requirement">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <h4>Участники</h4>
+                                <p>Ученик + руководитель (учитель)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="uipd-card">
+                    <div class="uipd-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Критерии оценки</h3>
+                    <p>Проект оценивается по:</p>
+                    <ol>
+                        <li><strong>Актуальность темы</strong> (0-3 балла)</li>
+                        <li><strong>Глубина исследования</strong> (0-4 балла)</li>
+                        <li><strong>Практическая значимость</strong> (0-3 балла)</li>
+                        <li><strong>Оформление работы</strong> (0-3 балла)</li>
+                        <li><strong>Качество презентации</strong> (0-4 балла)</li>
+                        <li><strong>Ответы на вопросы</strong> (0-3 балла)</li>
+                    </ol>
+                    <p class="total-score"><strong>Максимум: 20 баллов → "5"</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Визуализатор проекта -->
+        <section id="visualizer" class="card">
+            <h2 class="section-title"><i class="fas fa-desktop"></i> Визуализатор проекта от КЛАУД</h2>
+            <p class="section-subtitle">Пример проекта: "Как правильно вырастить авокадо из косточки в домашних условиях"</p>
+            
+            <div class="visualizer-wrapper">
+                <div class="project-pages-container">
+                    <h3><i class="fas fa-book-open"></i> Детальная структура проекта (20 страниц)</h3>
+                    <div class="pages-timeline">
+                        <div class="page-group">
+                            <h4>Часть 1: Введение и теория (1-7 стр.)</h4>
+                            <div class="page-items">
+                                <div class="page-item active">
+                                    <strong>1. Титульный лист</strong>
+                                    <p>Полное название школы, тема проекта, ФИО ученика и руководителя, год выполнения</p>
+                                </div>
+                                <div class="page-item">
+                                    <strong>2. Оглавление</strong>
+                                    <p>Автоматическое оглавление с номерами страниц, выровненное по правому краю</p>
+                                </div>
+                                <div class="page-item">
+                                    <strong>3. Введение (2 страницы)</strong>
+                                    <p>Актуальность темы: рост популярности здорового питания и домашнего садоводства. Цель проекта: освоить технологию выращивания авокадо в домашних условиях. Задачи: изучить биологию растения, освоить методы проращивания, провести эксперимент, проанализировать результаты.</p>
+                                </div>
+                                <div class="page-item">
+                                    <strong>4. Объект и предмет исследования</strong>
+                                    <p>Объект: растение авокадо (Persea americana). Предмет: условия и методы проращивания косточки авокадо в домашних условиях.</p>
+                                </div>
+                                <div class="page-item">
+                                    <strong>5. Гипотеза исследования</strong>
+                                    <p>Предполагается, что при соблюдении оптимальных условий температуры, влажности и освещения косточка авокадо успешно прорастет и даст жизнеспособный росток даже в условиях средней полосы России.</p>
+                                </div>
+                                <div class="page-item">
+                                    <strong>6. Методы исследования</strong>
+                                    <p>Теоретические: анализ научной литературы, изучение интернет-ресурсов. Эмпирические: наблюдение, эксперимент, сравнение, измерение. Математические: статистическая обработка данных.</p>
+                                </div>
+                                <div class="page-item">
+                                    <strong>7. Теоретическая часть: Авокадо</strong>
+                                    <p>Авокадо - вечнозеленое плодовое растение семейства Лавровые. Родина - Центральная Америка и Мексика. Содержит витамины A, E, C, K, B6, фолиевую кислоту, калий, медь. Плод - крупная односемянная ягода грушевидной формы.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="page-group">
+                            <h4>Часть 2: Практика и эксперимент (8-15 стр.)</h4>
+                            <div class="page-items">
+                                <div class="page-item">
+                                    <strong>8. Биологические особенности</strong>
+                                    <p>Авокадо - тропическое растение, предпочитающее температуру 18-25°C, влажность 60-80%, рассеянное освещение. В природе достигает 20 метров, в домашних условиях - 1-2 метра.</p>
+                                </div>
+                                <div class="page-item">
+                                    <strong>9. Методы проращивания</strong>
+                                    <p>Метод 1: Проращивание в воде с использованием зубочисток. Метод 2: Проращивание во влажном грунте. Метод 3: Проращивание во влажной вате. Каждый метод имеет свои преимущества и недостатки.</p>
+                                </div>
+                                <div class="page-item">
+                                    <strong>10. Подготовка косточки</strong>
+                                    <p>Выбор спелого плода, аккуратное извлечение косточки, очистка от мякоти, определение верхней и нижней части (более широкая часть - низ, откуда появляются корни).</p>
+                                </div>
+                                <div class="page-item">
+                                    <strong>11. Экспериментальная часть</strong>
+                                    <p>Было взято 3 косточки авокадо сорта Хасс. Косточка №1 помещена в воду, №2 - во влажный грунт, №3 - завернута во влажную вату. Условия: температура 22°C, естественное освещение, ежедневное наблюдение.</p>
+                                </div>
+                                <div class="page-item">
+                                    <strong>12. Таблица наблюдений</strong>
+                                    <p>Подробная таблица с ежедневными записями: дата, состояние косточки, длина корней, появление ростка, изменения цвета, заметки и наблюдения. Всего 60 дней наблюдений.</p>
+                                </div>
+                                <div class="page-item">
+                                    <strong>13. Графики роста</strong>
+                                    <p>График №1: Динамика роста корней по дням. График №2: Сравнение скорости прорастания трех методов. График №3: Зависимость роста от температуры.</p>
+                                </div>
+                                <div class="page-item">
+                                    <strong>14. Фотодокументация</strong>
+                                    <p>12 фотографий ключевых этапов: день 1 - подготовка, день 7 - набухание косточки, день 14 - появление трещины, день 21 - первые корни, день 28 - появление ростка, день 35 - развитие листьев.</p>
+                                </div>
+                                <div class="page-item">
+                                    <strong>15. Проблемы и решения</strong>
+                                    <p>Проблема 1: Плесень на косточке. Решение: обработка слабым раствором марганцовки. Проблема 2: Замедленный рост. Решение: добавление стимулятора корнеобразования. Проблема 3: Пожелтение листьев. Решение: регулировка полива.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="page-group">
+                            <h4>Часть 3: Результаты и выводы (16-20 стр.)</h4>
+                            <div class="page-items">
+                                <div class="page-item">
+                                    <strong>16. Анализ результатов</strong>
+                                    <p>Метод проращивания в воде оказался самым эффективным: косточка проросла за 21 день, дала корни длиной 8 см. Грунтовой метод: 28 дней, корни 5 см. Метод с ватой: 35 дней, слабые корни 3 см. Вывод: водный метод оптимален для начального этапа.</p>
+                                </div>
+                                <div class="page-item">
+                                    <strong>17. Рекомендации по уходу</strong>
+                                    <p>Полив: умеренный, без переувлажнения. Освещение: яркий рассеянный свет, защита от прямых солнечных лучей. Температура: 18-25°C, защита от сквозняков. Подкормка: раз в 2 недели в период роста. Пересадка: ежегодная весной.</p>
+                                </div>
+                                <div class="page-item">
+                                    <strong>18. Практическая значимость</strong>
+                                    <p>Работа демонстрирует возможность выращивания экзотического растения в домашних условиях. Результаты могут быть использованы на уроках биологии, в кружках юных натуралистов, для оформления школьных оранжерей.</p>
+                                </div>
+                                <div class="page-item">
+                                    <strong>19. Заключение</strong>
+                                    <p>Цель проекта достигнута: освоена технология выращивания авокадо из косточки. Задачи выполнены: изучена биология растения, проведен эксперимент, получен положительный результат. Гипотеза подтверждена: при соблюдении условий авокадо успешно прорастает в домашних условиях.</p>
+                                </div>
+                                <div class="page-item">
+                                    <strong>20. Список литературы</strong>
+                                    <p>15 источников: 8 книг по ботанике и растениеводству, 5 научных статей, 2 интернет-ресурса (официальные сайты ботанических садов). Все источники оформлены по ГОСТу.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timer-section" id="timer">
+                    <h3><i class="fas fa-hourglass-half"></i> Тренажер речи от КЛАУД</h3>
+                    <p>Тренируйтесь укладываться в 15 секунд на каждый слайд презентации!</p>
+                    
+                    <div class="timer-container">
+                        <div class="timer-display">
+                            <div class="time-circle">
+                                <div class="time" id="countdown">15</div>
+                                <div class="timer-label">секунд на слайд</div>
+                            </div>
+                        </div>
+                        
+                        <div class="presentation-slide">
+                            <div class="slide-header">
+                                <span class="slide-title" id="slideTitle">Слайд 1: Введение проекта</span>
+                                <span class="slide-counter" id="slideCounter">1/5</span>
+                            </div>
+                            <div class="slide-content">
+                                <div class="slide-image">
+                                    <div class="image-placeholder" id="slideImage">
+                                        <i class="fas fa-seedling"></i>
+                                        <span>Изображение слайда</span>
+                                    </div>
+                                </div>
+                                <div class="slide-text" id="slideText">
+                                    <h4>Введение: Почему авокадо?</h4>
+                                    <p>Авокадо - уникальное тропическое растение семейства Лавровые, которое можно успешно вырастить в домашних условиях из обычной косточки. Этот проект демонстрирует все этапы выращивания: от подготовки косточки до получения жизнеспособного растения. Актуальность темы обусловлена ростом интереса к здоровому питанию и домашнему садоводству.</p>
+                                    <p class="speech-tip"><i class="fas fa-lightbulb"></i> <strong>Совет от КЛАУД:</strong> Начните с интересного факта: "Знаете ли вы, что авокадо - это ягода, а не овощ?"</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="timer-controls">
+                            <button class="timer-btn start" id="startTimer">
+                                <i class="fas fa-play"></i> Старт
+                            </button>
+                            <button class="timer-btn pause" id="pauseTimer">
+                                <i class="fas fa-pause"></i> Пауза
+                            </button>
+                            <button class="timer-btn reset" id="resetTimer">
+                                <i class="fas fa-redo"></i> Сброс
+                            </button>
+                        </div>
+                        
+                        <div class="timer-info">
+                            <p><i class="fas fa-info-circle"></i> <strong>Система КЛАУД:</strong> Каждые 15 секунд слайд меняется. 5 секунд - пауза между слайдами для перехода.</p>
+                            <p><i class="fas fa-robot"></i> <strong>ИИ-совет:</strong> Говорите четко, смотрите на аудиторию, используйте жесты!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Структура проекта -->
+        <section id="structure" class="card">
+            <h2 class="section-title"><i class="fas fa-project-diagram"></i> Идеальная структура проекта от КЛАУД</h2>
+            
+            <div class="structure-guide">
+                <div class="structure-step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3><i class="fas fa-file-signature"></i> Титульный лист (обязательно!)</h3>
+                        <p><strong>КЛАУД рекомендует:</strong> Первое впечатление о работе. Должен содержать: полное название школы, тему проекта крупным шрифтом, ФИО ученика и класс, ФИО руководителя и его должность, город и год выполнения.</p>
+                        <div class="step-example">
+                            <div class="example-title">
+                                <h4>Муниципальное бюджетное общеобразовательное учреждение "Средняя общеобразовательная школа № 158 с углубленным изучением отдельных предметов"</h4>
+                                <h3>ВЫРАЩИВАНИЕ АВОКАДО ИЗ КОСТОЧКИ В ДОМАШНИХ УСЛОВИЯХ: ЭКСПЕРИМЕНТАЛЬНОЕ ИССЛЕДОВАНИЕ</h3>
+                                <p>Учебно-исследовательский проект по биологии</p>
+                                <p>Выполнил: Иванов Иван Иванович, ученик 9А класса</p>
+                                <p>Научный руководитель: Петрова Мария Ивановна, учитель биологии высшей категории</p>
+                                <p class="year">г. Ярославль, 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="structure-step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3><i class="fas fa-list-ol"></i> Оглавление (автоматическое)</h3>
+                        <p><strong>КЛАУД рекомендует:</strong> Используйте автоматическое оглавление в Word! Вставка → Оглавление → Автособираемое. Все разделы должны быть четко структурированы с номерами страниц справа.</p>
+                        <div class="ai-tip">
+                            <i class="fas fa-robot"></i>
+                            <p><strong>ИИ-подсказка:</strong> Не нумеруйте титульный лист, но считайте его в общей нумерации. Номер "1" ставится на странице с оглавлением.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="structure-step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3><i class="fas fa-book-open"></i> Введение (1.5-2 страницы)</h3>
+                        <p><strong>КЛАУД рекомендует:</strong> Самая важная часть! Должна содержать: актуальность темы (почему это важно), цель (что хотим достичь), задачи (конкретные шаги), объект и предмет исследования, методы, гипотезу, практическую значимость.</p>
+                        <div class="requirements">
+                            <div class="requirement">
+                                <i class="fas fa-bullseye"></i>
+                                <div>
+                                    <h4>Цель</h4>
+                                    <p><strong>Пример:</strong> "Освоить технологию выращивания авокадо из косточки в домашних условиях и определить оптимальные условия для его роста"</p>
+                                </div>
+                            </div>
+                            <div class="requirement">
+                                <i class="fas fa-tasks"></i>
+                                <div>
+                                    <h4>Задачи (4-6 пунктов)</h4>
+                                    <p>1. Изучить биологические особенности авокадо<br>2. Освоить методы проращивания косточки<br>3. Провести эксперимент по выращиванию<br>4. Проанализировать результаты</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="structure-step">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3><i class="fas fa-flask"></i> Основная часть (10-12 страниц)</h3>
+                        <p><strong>КЛАУД рекомендует:</strong> Разделите на главы! Глава 1: Теоретическая часть (обзор литературы). Глава 2: Практическая часть (методика, эксперимент, результаты). Каждая глава - 2-3 параграфа. Обязательно: таблицы, графики, фотографии.</p>
+                    </div>
+                </div>
+                
+                <div class="structure-step">
+                    <div class="step-number">05</div>
+                    <div class="step-content">
+                        <h3><i class="fas fa-chart-bar"></i> Заключение (1-1.5 страницы)</h3>
+                        <p><strong>КЛАУД рекомендует:</strong> Выводы по цели и задачам (по пунктам!). Практическая значимость работы (где можно использовать результаты). Перспективы дальнейшего исследования (что можно исследовать дальше).</p>
+                        <div class="ai-tip">
+                            <i class="fas fa-robot"></i>
+                            <p><strong>ИИ-шаблон вывода:</strong> "В результате проведенного исследования цель достигнута: [повторить цель]. Задачи решены: 1) [повторить задачу 1] - выполнено, 2) [повторить задачу 2] - выполнено..."</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="structure-step">
+                    <div class="step-number">06</div>
+                    <div class="step-content">
+                        <h3><i class="fas fa-book"></i> Список литературы (ГОСТ!)</h3>
+                        <p><strong>КЛАУД рекомендует:</strong> 10-15 источников для 9 класса. Книги, статьи, интернет-ресурсы (только официальные!). Оформление по ГОСТ 7.1-2003. Пример: Иванов А.А. Биология растений. - М.: Просвещение, 2020. - 256 с.</p>
+                    </div>
+                </div>
+                
+                <div class="structure-step">
+                    <div class="step-number">07</div>
+                    <div class="step-content">
+                        <h3><i class="fas fa-paperclip"></i> Приложения</h3>
+                        <p><strong>КЛАУД рекомендует:</strong> Все, что не вошло в основную часть: большие таблицы, анкеты, дополнительные фотографии, чертежи, схемы. Каждое приложение на отдельной странице с номером (Приложение А, Приложение Б).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Примеры проектов -->
+        <section id="projects" class="card">
+            <h2 class="section-title"><i class="fas fa-trophy"></i> База проектов от КЛАУД</h2>
+            <p class="section-subtitle">Изучите проекты, которые получили высшие оценки. Вы можете добавлять свои!</p>
+            
+            <div class="projects-container">
+                <div class="projects-filter">
+                    <button class="filter-btn active" data-filter="all">Все проекты</button>
+                    <button class="filter-btn" data-filter="biology">Биология</button>
+                    <button class="filter-btn" data-filter="ecology">Экология</button>
+                    <button class="filter-btn" data-filter="chemistry">Химия</button>
+                    <button class="filter-btn" data-filter="physics">Физика</button>
+                </div>
+                
+                <div class="projects-grid" id="projectsGrid">
+                    <!-- Проекты будут загружены из JavaScript -->
+                </div>
+                
+                <div class="add-project-form">
+                    <h3><i class="fas fa-plus-circle"></i> Добавить проект в базу КЛАУД</h3>
+                    <div class="form-grid">
+                        <input type="text" id="projectName" placeholder="Название проекта">
+                        <select id="projectCategory">
+                            <option value="biology">Биология</option>
+                            <option value="ecology">Экология</option>
+                            <option value="chemistry">Химия</option>
+                            <option value="physics">Физика</option>
+                            <option value="technology">Технологии</option>
+                            <option value="social">Социальные</option>
+                        </select>
+                        <input type="text" id="projectLink" placeholder="Ссылка на проект (если есть)">
+                        <button class="btn-primary" id="addProjectBtn">
+                            <i class="fas fa-plus"></i> Добавить в базу
+                        </button>
+                    </div>
+                    <p class="ai-note"><i class="fas fa-robot"></i> <strong>КЛАУД:</strong> Добавляйте только реальные проекты! Это поможет другим ученикам.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Прогресс проекта -->
+        <section id="progress" class="card">
+            <h2 class="section-title"><i class="fas fa-chart-line"></i> Трекер прогресса от КЛАУД</h2>
+            
+            <div class="progress-tracker">
+                <div class="progress-overview">
+                    <div class="progress-circle-large">
+                        <svg width="200" height="200" viewBox="0 0 200 200">
+                            <circle cx="100" cy="100" r="90" fill="none" stroke="#ecf0f1" stroke-width="20"/>
+                            <circle cx="100" cy="100" r="90" fill="none" stroke="#27ae60" stroke-width="20" 
+                                    stroke-linecap="round" stroke-dasharray="565.48" stroke-dashoffset="565.48"
+                                    id="progressCircle"/>
+                        </svg>
+                        <div class="progress-text">
+                            <span id="progressPercent">0%</span>
+                            <small>выполнено</small>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-stats">
+                        <div class="stat-card">
+                            <h4><i class="fas fa-check-circle"></i> Выполнено</h4>
+                            <p class="stat-value" id="completedStages">0/7</p>
+                        </div>
+                        <div class="stat-card">
+                            <h4><i class="fas fa-calendar"></i> Дней до защиты</h4>
+                            <p class="stat-value" id="daysLeft">30</p>
+                        </div>
+                        <div class="stat-card">
+                            <h4><i class="fas fa-star"></i> Прогноз оценки</h4>
+                            <p class="stat-value" id="predictedGrade">-</p>
+                        </div>
+                        <div class="stat-card">
+                            <h4><i class="fas fa-robot"></i> Помощь КЛАУД</h4>
+                            <p class="stat-value" id="aiHelp">Готов</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="progress-steps">
+                    <h3><i class="fas fa-list-check"></i> 7 этапов проекта с КЛАУД</h3>
+                    
+                    <div class="steps-list">
+                        <div class="step-item" data-step="1">
+                            <div class="step-checkbox">
+                                <input type="checkbox" id="step1">
+                                <label for="step1"></label>
+                            </div>
+                            <div class="step-details">
+                                <h4>Выбор темы и утверждение</h4>
+                                <p>Определение темы проекта и обсуждение с руководителем. <strong>Совет КЛАУД:</strong> Выбирайте то, что вам действительно интересно!</p>
+                            </div>
+                            <span class="step-status" id="status1">Не начато</span>
+                        </div>
+                        
+                        <div class="step-item" data-step="2">
+                            <div class="step-checkbox">
+                                <input type="checkbox" id="step2">
+                                <label for="step2"></label>
+                            </div>
+                            <div class="step-details">
+                                <h4>Постановка цели и задач</h4>
+                                <p>Формулировка цели, задач и гипотезы исследования. <strong>Совет КЛАУД:</strong> Цель должна быть конкретной и достижимой!</p>
+                            </div>
+                            <span class="step-status" id="status2">Не начато</span>
+                        </div>
+                        
+                        <div class="step-item" data-step="3">
+                            <div class="step-checkbox">
+                                <input type="checkbox" id="step3">
+                                <label for="step3"></label>
+                            </div>
+                            <div class="step-details">
+                                <h4>Исследование и литература</h4>
+                                <p>Сбор информации и изучение литературы по теме. <strong>Совет КЛАУД:</strong> Используйте научные статьи и книги, а не только интернет!</p>
+                            </div>
+                            <span class="step-status" id="status3">Не начато</span>
+                        </div>
+                        
+                        <div class="step-item" data-step="4">
+                            <div class="step-checkbox">
+                                <input type="checkbox" id="step4">
+                                <label for="step4"></label>
+                            </div>
+                            <div class="step-details">
+                                <h4>Проведение эксперимента</h4>
+                                <p>Проведение опытов, наблюдений и сбор данных. <strong>Совет КЛАУД:</strong> Ведите дневник наблюдений каждый день!</p>
+                            </div>
+                            <span class="step-status" id="status4">Не начато</span>
+                        </div>
+                        
+                        <div class="step-item" data-step="5">
+                            <div class="step-checkbox">
+                                <input type="checkbox" id="step5">
+                                <label for="step5"></label>
+                            </div>
+                            <div class="step-details">
+                                <h4>Оформление работы</h4>
+                                <p>Написание текста работы и создание презентации. <strong>Совет КЛАУД:</strong> Следуйте структуре, которую я показал выше!</p>
+                            </div>
+                            <span class="step-status" id="status5">Не начато</span>
+                        </div>
+                        
+                        <div class="step-item" data-step="6">
+                            <div class="step-checkbox">
+                                <input type="checkbox" id="step6">
+                                <label for="step6"></label>
+                            </div>
+                            <div class="step-details">
+                                <h4>Репетиция защиты</h4>
+                                <p>Подготовка к защите и тренировка выступления. <strong>Совет КЛАУД:</strong> Используйте тренажер речи на этом сайте!</p>
+                            </div>
+                            <span class="step-status" id="status6">Не начато</span>
+                        </div>
+                        
+                        <div class="step-item" data-step="7">
+                            <div class="step-checkbox">
+                                <input type="checkbox" id="step7">
+                                <label for="step7"></label>
+                            </div>
+                            <div class="step-details">
+                                <h4>Защита проекта</h4>
+                                <p>Презентация проекта и ответы на вопросы комиссии. <strong>Совет КЛАУД:</strong> Будьте уверены - вы знаете свою работу лучше всех!</p>
+                            </div>
+                            <span class="step-status" id="status7">Не начато</span>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-actions">
+                        <button class="btn-primary" id="saveProgressBtn">
+                            <i class="fas fa-save"></i> Сохранить прогресс
+                        </button>
+                        <button class="btn-secondary" id="resetProgressBtn">
+                            <i class="fas fa-redo"></i> Сбросить всё
+                        </button>
+                        <button class="btn-secondary" id="aiAdviceBtn">
+                            <i class="fas fa-robot"></i> Совет от КЛАУД
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Помощь ИИ -->
+        <section id="ai-help" class="card">
+            <h2 class="section-title"><i class="fas fa-robot"></i> Помощь ИИ КЛАУД</h2>
+            
+            <div class="ai-assistant">
+                <div class="ai-header">
+                    <div class="ai-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="ai-info">
+                        <h3>КЛАУД - ваш ИИ-помощник</h3>
+                        <p>Создан Амаряном Суреном (9А) с помощью Николаева Андрея и Борисова Артемия (9А)</p>
+                        <div class="ai-status-badge">
+                            <div class="status-dot online"></div>
+                            <span>Онлайн и готов помочь</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ai-chat">
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="message ai">
+                            <div class="message-avatar">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="message-content">
+                                <p>Привет! Я КЛАУД - ИИ-помощник для учебных проектов. Я помогу вам:</p>
+                                <ul>
+                                    <li>Понять, что такое УИПД</li>
+                                    <li>Создать структуру проекта</li>
+                                    <li>Подготовиться к защите</li>
+                                    <li>Тренировать речь</li>
+                                    <li>Следить за прогрессом</li>
+                                </ul>
+                                <p>Задавайте вопросы или нажмите на быстрые команды ниже!</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="quick-commands">
+                        <button class="command-btn" data-command="structure">
+                            <i class="fas fa-sitemap"></i> Структура проекта
+                        </button>
+                        <button class="command-btn" data-command="introduction">
+                            <i class="fas fa-book-open"></i> Как написать введение
+                        </button>
+                        <button class="command-btn" data-command="defense">
+                            <i class="fas fa-microphone"></i> Советы по защите
+                        </button>
+                        <button class="command-btn" data-command="timer">
+                            <i class="fas fa-hourglass"></i> Запустить тренажер
+                        </button>
+                    </div>
+                    
+                    <div class="chat-input">
+                        <input type="text" id="aiInput" placeholder="Спросите КЛАУДа о проекте...">
+                        <button class="btn-primary" id="sendMessage">
+                            <i class="fas fa-paper-plane"></i> Отправить
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="ai-capabilities">
+                    <h3><i class="fas fa-magic"></i> Что умеет КЛАУД:</h3>
+                    <div class="capabilities-grid">
+                        <div class="capability">
+                            <i class="fas fa-lightbulb"></i>
+                            <h4>Генерация идей</h4>
+                            <p>Помогает выбрать тему и сформулировать цели</p>
+                        </div>
+                        <div class="capability">
+                            <i class="fas fa-list-check"></i>
+                            <h4>Планирование</h4>
+                            <p>Создает календарный план и чек-листы</p>
+                        </div>
+                        <div class="capability">
+                            <i class="fas fa-chart-line"></i>
+                            <h4>Анализ прогресса</h4>
+                            <p>Следит за выполнением этапов и дает советы</p>
+                        </div>
+                        <div class="capability">
+                            <i class="fas fa-microphone-alt"></i>
+                            <h4>Тренировка речи</h4>
+                            <p>Таймер для репетиции защиты</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- О разработчиках -->
+        <section class="card developers-card">
+            <h2 class="section-title"><i class="fas fa-code"></i> Создатели КЛАУД</h2>
+            
+            <div class="developers-info">
+                <div class="developer-main">
+                    <div class="developer-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="developer-details">
+                        <h3>Главный разработчик и создатель ИИ</h3>
+                        <p class="developer-name">Амарян Сурен</p>
+                        <p class="developer-class">9А класс</p>
+                        <p class="developer-role">Идея, программирование, дизайн</p>
+                    </div>
+                </div>
+                
+                <div class="developer-help">
+                    <h3><i class="fas fa-hands-helping"></i> Команда помощников:</h3>
+                    <div class="helpers">
+                        <div class="helper">
+                            <i class="fas fa-user-graduate"></i>
+                            <div>
+                                <p class="helper-name">Николаев Андрей</p>
+                                <p class="helper-class">9А класс</p>
+                                <p class="helper-role">Тестирование, контент</p>
+                            </div>
+                        </div>
+                        <div class="helper">
+                            <i class="fas fa-user-graduate"></i>
+                            <div>
+                                <p class="helper-name">Борисов Артемий</p>
+                                <p class="helper-class">9А класс</p>
+                                <p class="helper-role">Исследование, материалы</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-info">
+                    <h3><i class="fas fa-info-circle"></i> О проекте КЛАУД</h3>
+                    <p>КЛАУД (Креативный Личный Ассистент Учебных Достижений) - это ИИ-помощник, созданный в рамках учебного проекта для помощи школьникам в подготовке и защите учебно-исследовательских работ. Система использует современные веб-технологии для создания интерактивного обучающего пространства.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">ИИ-логика</span>
+                        <span class="tech-tag">Адаптивный дизайн</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-robot"></i>
+                        <div>
+                            <h3>КЛАУД</h3>
+                            <p>ИИ-помощник для учебных проектов</p>
+                        </div>
+                    </div>
+                    <div class="footer-info">
+                        <p><i class="fas fa-code"></i> <strong>Создатель:</strong> Амарян Сурен (9А)</p>
+                        <p><i class="fas fa-users"></i> <strong>Команда:</strong> Николаев Андрей, Борисов Артемий</p>
+                        <p><i class="fas fa-calendar"></i> <strong>Год создания:</strong> 2026</p>
+                        <p><i class="fas fa-graduation-cap"></i> <strong>Для:</strong> УИПД 9 класс</p>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4><i class="fas fa-link"></i> Разделы КЛАУД</h4>
+                    <ul class="footer-links">
+                        <li><a href="#uipd"><i class="fas fa-arrow-right"></i> Что такое УИПД</a></li>
+                        <li><a href="#visualizer"><i class="fas fa-arrow-right"></i> Визуализатор</a></li>
+                        <li><a href="#structure"><i class="fas fa-arrow-right"></i> Структура</a></li>
+                        <li><a href="#projects"><i class="fas fa-arrow-right"></i> Примеры</a></li>
+                        <li><a href="#progress"><i class="fas fa-arrow-right"></i> Прогресс</a></li>
+                        <li><a href="#ai-help"><i class="fas fa-arrow-right"></i> Помощь ИИ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4><i class="fas fa-share-alt"></i> Поделиться КЛАУДом</h4>
+                    <div class="social-share">
+                        <button class="social-btn">
+                            <i class="fab fa-vk"></i>
+                        </button>
+                        <button class="social-btn">
+                            <i class="fab fa-telegram"></i>
+                        </button>
+                        <button class="social-btn" id="copyLinkBtn">
+                            <i class="fas fa-link"></i> Копировать ссылку
+                        </button>
+                    </div>
+                    
+                    <div class="guest-notice">
+                        <i class="fas fa-user"></i>
+                        <div>
+                            <p>Вы вошли как <strong>Гость</strong></p>
+                            <small>9А класс | Режим: Ученик</small>
+                        </div>
+                    </div>
+                    
+                    <div class="ai-footer-note">
+                        <i class="fas fa-robot"></i>
+                        <p>КЛАУД всегда готов помочь с вашим проектом!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 КЛАУД - ИИ-помощник для учебных проектов. Создан в рамках УИПД.</p>
+                <div class="footer-meta">
+                    <span>Версия 2.0 "Умный помощник"</span>
+                    <span>Все материалы для образовательных целей</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Уведомление -->
+    <div id="notification" class="notification">
+        <div class="notification-content">
+            <i class="fas fa-check-circle"></i>
+            <span id="notificationText">Сообщение от КЛАУД</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
